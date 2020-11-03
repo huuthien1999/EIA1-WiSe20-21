@@ -10,26 +10,78 @@
 
 <body>
     <header>
-        <nav>
-            <h1>Contact Me:</h1>
-		    <ul class="navigation">
-			    <p><a href="about_me.html">About Me</a></p>
-		    	<p><a href="portfolio.html">Portfolio</a></p>
-		    </ul>
+        <nav class=nav-bar>   
+		 <ul class=nav-bar-list>
+             <li><a href="portfolio.html">PORTFOLIO</a></li>
+             <li><a href="about_me.html">ABOUT</a></li>
+             <li class=aktiv><a href="contact.html">CONTACT</a></li>
+         </ul>
         </nav>
-    </header>
+
+        <div class=oben>
+            <h2>portfolio</h2>
+            <div class= inerhalb-oben>
+
+                <h3>loremipsum</h3>
+
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo 
+                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus 
+                est Lorem ipsum dolor sit amet.
+                </p>
+                <nav class=fb-logo>
+                    <a href="assets/website/facebook.png"><img src="assets/logo/icon_facebook.png" alt="moin"></a>
+                </nav>
+                
+            </div>
+            
+            
+
+        </div>
+        
     </header>
 
     <main>
-        <p><b>Telefon &#128222</b></p> <span style="font-size:30px">+49123456798</span>
-        <p><b>E-Mail &#128231</b></p> <span style="font-size:30px">  max.mustermann@hs-furtwangen.de</span>
-        <p><b>Social Media &#9889</b></p> 
-        <span style="font-size:30px">
-            <a href="https://www.facebook.com/">facebook</a>
-            <a href="https://www.instagram.com/">instagram</a>
-        </span>
+        <h2>KONTAKT</h2>
 
-       
+
+        <section>
+        
+            <form class=kontaktformular action="" method="POST">
+
+                <div>
+                    <label for="besucher-vorname">Vorname</label>
+                    <input type="text" id="besucher-vorname" name="besucher-vorname">
+                </div>
+
+                <div>
+                    <label for="besucher-nachname">Nachname</label>
+                    <input type="text" id="besucher-nachname" name="besucher-nachname">
+                </div>
+
+                <div>
+                    <label for="besucher-mail">E-Mail</label>
+                    <input type="email" id="besucher-mail" name="besucher-mail">
+                </div>
+
+                <div>
+                    <label for="nachricht">Nachricht</label>
+                    <textarea id="nachricht" name="nachricht" cols="40" rows="5"></textarea>
+                </div>
+                
+                <div>
+                    <p>Mit Absenden der Nachricht bestätige ich <br>
+                    den <a href="../Aufgabe_03/assets/website/datenschutz.png">Datenschutz</a></p>
+                    
+
+                </div>
+
+                <div>
+                    <button class="button" type="submit" value="Abgeschickt">absenden</button>
+                </div>
+
+        </section>
     </main>
 
     <footer>

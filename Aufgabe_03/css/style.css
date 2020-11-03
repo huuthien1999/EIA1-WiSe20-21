@@ -16,6 +16,10 @@ body{
 
 
 /*Nav-Bar*/
+.nav-bar .aktiv{
+    background-color: gray;
+}
+
 header{
     width: 800px;
 }
@@ -41,11 +45,16 @@ header{
 }
 
 .nav-bar-list a{
+    font-size: 10px;
     display: block;
     text-decoration: none;
     text-align: center;
     color: white;
     padding: 0.5rem;
+}
+.nav-bar-list a:hover{
+
+    color: red;
 }
 
 /*Header*/
@@ -94,6 +103,10 @@ header{
 }
 /*Main*/
 
+div#fotos {
+    margin-top: 300px;
+}
+
 #fotos img{
     width: 100%;
     margin: auto;
@@ -126,11 +139,41 @@ header{
 
 /*contact*/
 
+    /*Layout Kontaktformular*/
+    .kontaktformular label{
+        display: block;
+        position: absolute;
+        color: white;
+        font-size: 16px;
+    }
 
+    .kontaktformular div{
+        position: relative;
+        padding: 0 8px;
+        margin: 1rem;
 
+    }
 
+    .kontaktformular input[type="text"],
+    .kontaktformular input[type="email"],
+    .kontaktformular textarea{
+        border: none;
+        background-color: #808080;
+        padding: 16px 0 10px;
+        font-size: 16px;
+    
+    }
 
+    .button{
+        font-size: 12px;
+        font-family: inherit;
+        border: 0px;
+        color: white;
+        background-color: #808080;
+        cursor: pointer;
+    }
 
+    .
 
 
 
