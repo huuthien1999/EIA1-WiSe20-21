@@ -1,0 +1,39 @@
+/*Allgemein*/
+    @font-face {
+    font-family: jellyka;
+    src: url(../fonts/Jellyka\ Delicious\ Cake.ttf);
+    format(„TrueType“);
+    }
+
+    body{
+        background-image: url(../images/bg.png);   
+        height: 750px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+/*Karten Layout*/
+    .karte{
+        display: block;
+        position: relative;
+    }
+
+/*Karten Text-Layout*/
+
+    .karte_txt{
+        font-family: jellyka;
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding:30px 40px 50px 40px;
+    }
+
+    .karte_txt h1{
+        font-size: 70px;
+    }
+
+    .karte_txt p{
+        font-size: 25px;
+    }

@@ -16,46 +16,47 @@ body{
 
 
 /*Nav-Bar*/
-.nav-bar .aktiv{
-    background-color: gray;
-}
 
-header{
-    width: 800px;
-}
+    .nav-bar .aktiv{
+        background-color: gray;
+    }
 
-.nav-bar {
-    position: fixed;
-    top: 0; /*sagt wo es sein soll beim sticky*/
-    right: 0%;
-    background: #333;
-    padding: 0;
-    margin: 0 0;
-    border-radius: 0px 0px 4px 4px;
-    
-}
+    header{
+        width: 800px;
+    }
 
-.nav-bar-list{
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-.nav-bar-list li{
-    list-style: none;
-}
+    .nav-bar {
+        position: fixed;
+        top: 0; /*sagt wo es sein soll beim sticky*/
+        right: 30%;
+        background: #333;
+        padding: 0;
+        margin: 0 0;
+        border-radius: 0px 0px 4px 4px;
+        
+    }
 
-.nav-bar-list a{
-    font-size: 10px;
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    padding: 0.5rem;
-}
-.nav-bar-list a:hover{
+    .nav-bar-list{
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-bar-list li{
+        list-style: none;
+    }
 
-    color: red;
-}
+    .nav-bar-list a{
+        font-size: 10px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        padding: 0.5rem;
+    }
+    .nav-bar-list a:hover{
+
+        color: red;
+    }
 
 /*Header*/
 
@@ -101,7 +102,7 @@ header{
 .fb-logo:hover{
     opacity: 100%;
 }
-/*Main*/
+/*Main Portifoli*/
 
 div#fotos {
     margin-top: 300px;
@@ -141,10 +142,12 @@ div#fotos {
 
     /*Layout Kontaktformular*/
     .kontaktformular label{
-        display: block;
+        display: flex;
         position: absolute;
-        color: white;
+        color: black;
         font-size: 16px;
+        padding: 1rem;
+        padding-left: 0;
     }
 
     .kontaktformular div{
@@ -153,7 +156,7 @@ div#fotos {
         margin: 1rem;
 
     }
-
+    
     .kontaktformular input[type="text"],
     .kontaktformular input[type="email"],
     .kontaktformular textarea{

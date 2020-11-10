@@ -1,0 +1,79 @@
+/*Allgemein*/
+
+    body{
+        background-image: url(../images/bg.png);   
+        height: 750px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+
+    }
+
+/*Karten Layout*/
+
+
+    .karte{
+        display: block;
+        position: relative;
+        
+    }
+/*Karten Text-Layout*/
+
+    .karte_txt{
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 40px;
+        padding-left: 40px;
+    }
+
+    .karte_txt h1{
+        margin: 0;
+    }
+
+/*Stern positionierung*/
+
+    .sterne{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .stern_1{
+        top: 250px;
+        left: 70px;
+    }
+
+    .stern_2{
+        top: 175px;
+        left: 235px;
+    }
+
+    .stern_3{
+        top: 280px;
+        left: 325px;
+    }
+
+    .stern_4{
+        top: 140px;
+        left: 450px;
+    }
+
+    /*Sterne Hover*/
+
+    .stern_1, .stern_2,
+    .stern_3, .stern_4{
+        position: absolute;
+        width: 65px;
+        height:65px;
+        background-image: url(../images/stern.png);
+        background-repeat: no-repeat;
+    }
+
+    .stern_1:hover, .stern_2:hover,
+    .stern_3:hover, .stern_4:hover{
+        background-image: url(../images/stern_hover.png);
+        background-repeat: no-repeat;
+    }

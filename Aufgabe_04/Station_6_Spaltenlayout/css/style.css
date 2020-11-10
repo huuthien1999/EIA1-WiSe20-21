@@ -1,0 +1,51 @@
+/*Allgemein*/
+
+    body{
+        background-image: url(../images/bg.png);   
+        height: 750px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+/*Karten Layout*/
+    .karte{
+        display: block;
+        position: relative;
+    }
+
+/*Karten Text-Layout*/
+
+    .karte_txt{
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding:30px 50px 50px 75px;
+    }
+/*Grid Positionierung*/
+
+    .grid{
+        position: absolute;
+        top: 150px;
+        left: 65px;
+    }
+
+/*Grid Einstellungen*/
+
+
+    .grid_karo{
+        color:white;
+        margin: auto;
+        width: 500px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, minmax(100px,auto));
+    }
+    .grid_herz{
+        color:white;
+        width: 500px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, minmax(100px,auto));
+    }
