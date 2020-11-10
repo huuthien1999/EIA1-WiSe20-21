@@ -1,9 +1,34 @@
 /*Allgemein*/
     @font-face {
-    font-family: jellyka;
-    src: url(../fonts/Jellyka\ Delicious\ Cake.ttf);
-    format(„TrueType“);
-    }
+        font-family: jellyka;
+        src: url(../fonts/Jellyka\ Delicious\ Cake.ttf); 
+        format(„TrueType“);
+        }
+
+    @font-face {
+        font-family: jellyka2;
+        src: url(../fonts/jellyka_delicious_cake-webfont.eot); 
+        format(„eot“);
+        }
+
+    @font-face {
+        font-family: jellyka3;
+        src: url(../fonts/jellyka_delicious_cake-webfont.svg); 
+        format(„svg“);
+        }
+
+    @font-face {
+        font-family: jellyka4;
+        src: url(../fonts/jellyka_delicious_cake-webfont.woff);
+        format(„woff“);
+        }
+
+    @font-face {
+        font-family: jellyka5;
+        src: 
+        url(../fonts/jellyka_delicious_cake-webfont.woff2);
+        format(„woff2“);
+        }
 
     body{
         background-image: url(../images/bg.png);   
@@ -22,7 +47,7 @@
 /*Karten Text-Layout*/
 
     .karte_txt{
-        font-family: jellyka;
+        font-family: jellyka , jellyka2 , jellyka3 , jellyka4 , jellyka5;
         color: white;
         position: absolute;
         top: 0;
