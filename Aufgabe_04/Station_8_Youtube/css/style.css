@@ -1,17 +1,24 @@
 /*Allgemein*/
 
+    html{
+        height: 100%; 
+    }
+
     body{
         background-image: url(../images/bg.png);   
-        height: 750px;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-/*Karten Layout*/
+    /*Karten Layout*/
     .karte{
-        display: block;
         position: relative;
+        display: block;
+        background: url(../images/wrapperbg.png) no-repeat;
+        height: 400px;
+        width: 600px;
     }
 
 /*Y-T Video Layout*/
@@ -30,7 +37,7 @@
 
 /*Banner positionierung*/
 
-    .banner_png{
+    .bannerPng{
         position: absolute;
         bottom: 5px;
         right: 0px;

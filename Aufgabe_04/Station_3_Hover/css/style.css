@@ -1,26 +1,29 @@
 /*Allgemein*/
+    html{
+        height: 100%; 
+    }
 
     body{
         background-image: url(../images/bg.png);   
-        height: 750px;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-    
-
     }
 
 /*Karten Layout*/
 
-
     .karte{
-        display: block;
         position: relative;
-        
+        display: block;
+        background: url(../images/wrapperbg.png) no-repeat;
+        height: 400px;
+        width: 600px;
     }
+
 /*Karten Text-Layout*/
 
-    .karte_txt{
+    .karteTxt{
         color: white;
         position: absolute;
         top: 0;
@@ -33,47 +36,42 @@
         margin: 0;
     }
 
-/*Stern positionierung*/
+/*Sterne Hover*/
 
-    .sterne{
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .stern_1{
-        top: 250px;
-        left: 70px;
-    }
-
-    .stern_2{
-        top: 175px;
-        left: 235px;
-    }
-
-    .stern_3{
-        top: 280px;
-        left: 325px;
-    }
-
-    .stern_4{
-        top: 140px;
-        left: 450px;
-    }
-
-    /*Sterne Hover*/
-
-    .stern_1, .stern_2,
-    .stern_3, .stern_4{
+    .stern1, .stern2,
+    .stern3, .stern4{
         position: absolute;
         width: 65px;
-        height:65px;
+        height: 65px;
         background-image: url(../images/stern.png);
         background-repeat: no-repeat;
     }
 
-    .stern_1:hover, .stern_2:hover,
-    .stern_3:hover, .stern_4:hover{
+    .stern1:hover, .stern2:hover,
+    .stern3:hover, .stern4:hover{
         background-image: url(../images/stern_hover.png);
         background-repeat: no-repeat;
+    }
+
+/*Stern positionierung*/
+
+
+    .stern1{
+        top: 250px;
+        left: 70px;
+    }
+
+    .stern2{
+        top: 175px;
+        left: 235px;
+    }
+
+    .stern3{
+        top: 280px;
+        left: 325px;
+    }
+
+    .stern4{
+        top: 140px;
+        left: 450px;
     }

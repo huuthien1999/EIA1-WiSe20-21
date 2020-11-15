@@ -30,23 +30,31 @@
         format(„woff2“);
         }
 
+    html{
+        height: 100%; 
+    }
+
     body{
         background-image: url(../images/bg.png);   
-        height: 750px;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
 /*Karten Layout*/
+
     .karte{
-        display: block;
         position: relative;
+        display: block;
+        background: url(../images/wrapperbg.png) no-repeat;
+        height: 400px;
+        width: 600px;
     }
 
 /*Karten Text-Layout*/
 
-    .karte_txt{
+    .karteTxt{
         font-family: jellyka , jellyka2 , jellyka3 , jellyka4 , jellyka5;
         color: white;
         position: absolute;
@@ -55,10 +63,10 @@
         padding:30px 40px 50px 40px;
     }
 
-    .karte_txt h1{
+    .karteTxt h1{
         font-size: 70px;
     }
 
-    .karte_txt p{
+    .karteTxt p{
         font-size: 25px;
     }
