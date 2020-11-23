@@ -48,6 +48,7 @@ var wachstumAustralienZ = (australia2018 - australia2008).toFixed(2);
 // Berechnungen E
 // Dom manipulation A
 //Funktionen
+// Europa
 function europa() {
     //Text
     document.querySelector(".titleRegion").innerHTML = "Europa";
@@ -61,6 +62,7 @@ function europa() {
 window.addEventListener('load', function () {
     document.querySelector(".europe").addEventListener("click", europa);
 });
+// Nord Amerika
 function nordAmerika() {
     //Text
     document.querySelector(".titleRegion").innerHTML = "Nord Amerika";
@@ -74,6 +76,7 @@ function nordAmerika() {
 window.addEventListener('load', function () {
     document.querySelector(".northamerica").addEventListener("click", nordAmerika);
 });
+//Süd Amerika
 function suedAmerika() {
     //Text
     document.querySelector(".titleRegion").innerHTML = "Süd Amerika";
@@ -87,6 +90,7 @@ function suedAmerika() {
 window.addEventListener('load', function () {
     document.querySelector(".southamerica").addEventListener("click", suedAmerika);
 });
+//Afrika
 function afrika() {
     //Text
     document.querySelector(".titleRegion").innerHTML = "Afrika";
@@ -100,6 +104,7 @@ function afrika() {
 window.addEventListener('load', function () {
     document.querySelector(".africa").addEventListener("click", afrika);
 });
+// Asien
 function asien() {
     //Text
     document.querySelector(".titleRegion").innerHTML = "Asien";
@@ -113,6 +118,7 @@ function asien() {
 window.addEventListener('load', function () {
     document.querySelector(".asia").addEventListener("click", asien);
 });
+// Australien
 function australien() {
     //Text
     document.querySelector(".titleRegion").innerHTML = "Süd Amerika";

@@ -66,8 +66,9 @@
 
 // Dom manipulation A
 
-    //Funktionen
+//Funktionen
 
+    // Europa
     function europa(){
         //Text
         document.querySelector(".titleRegion").innerHTML = "Europa";
@@ -82,6 +83,7 @@
         document.querySelector(".europe").addEventListener("click", europa);
         });
 
+    // Nord Amerika
     function nordAmerika(){
         //Text
         document.querySelector(".titleRegion").innerHTML = "Nord Amerika";
@@ -97,7 +99,7 @@
         });
         
         
-
+    //Süd Amerika
     function suedAmerika(){
         //Text
         document.querySelector(".titleRegion").innerHTML = "Süd Amerika";
@@ -112,7 +114,7 @@
         document.querySelector(".southamerica").addEventListener("click", suedAmerika);
         });
     
-
+    //Afrika
     function afrika(){
         //Text
         document.querySelector(".titleRegion").innerHTML = "Afrika";
@@ -129,7 +131,7 @@
         });
 
 
-
+    // Asien
     function asien(){
         //Text
         document.querySelector(".titleRegion").innerHTML = "Asien";
@@ -144,7 +146,7 @@
         document.querySelector(".asia").addEventListener("click", asien);
         });
 
-        
+    // Australien
     function australien(){
         //Text
         document.querySelector(".titleRegion").innerHTML = "Süd Amerika";
@@ -161,13 +163,6 @@
 
 
 // Dom manipulation E
-
-
-
-
-
-
-
 
 
 
