@@ -24,148 +24,67 @@
     var australia2008:number= 1993;
     var australia2018:number= 2100.5;
 
+    // Gesamte Emission
+    var gesEmission:number= africa2018 + sAmerica2018 + nAmerica2018 + europe2018 + asia2018 + australia2018;
+
 // Emissionswerter der Länder E
-
-
-// Berechnungen A
-
-    // Gesamtemission
-    var gesEmission:number= africa2018 + sAmerica2018 + europe2018 + nAmerica2018 + asia2018 + australia2018;
-
-    // Afrika
-    var prozentAfrikaGes:number= ((africa2018/gesEmission)*100).toFixed(2);
-    var wachstumAfrikaP:number= (((africa2018/africa2008)-1)*100).toFixed(2);
-    var wachstumAfrikaZ:number= (africa2018-africa2008).toFixed(2);
-
-    // Süd Amerika
-    var prozentSAmerikaGes:number= ((sAmerica2018/gesEmission)*100).toFixed(2);
-    var wachstumSAmerikaP:number= (((sAmerica2018/sAmerica2008)-1)*100).toFixed(2);
-    var wachstumSAmerikaZ:number= (sAmerica2018-sAmerica2008).toFixed(2);
-
-    // Europa
-    var prozentEuropaGes:number= ((europe2018/gesEmission)*100).toFixed(2);
-    var wachstumEuropaP:number= (((europe2018/europe2008)-1)*100).toFixed(2);
-    var wachstumEuropaZ:number= (europe2018-europe2008).toFixed(2);
-
-    // Nord Amerika
-    var prozentNAmerikaGes:number= ((nAmerica2018/gesEmission)*100).toFixed(2);
-    var wachstumNAmerikaP:number= (((nAmerica2018/nAmerica2008)-1)*100).toFixed(2);
-    var wachstumNAmerikaZ:number= (nAmerica2018-nAmerica2008).toFixed(2);
-
-    // Asien
-    var prozentAsienGes:number= ((asia2018/gesEmission)*100).toFixed(2);
-    var wachstumAsienP:number= (((asia2018/asia2008)-1)*100).toFixed(2);
-    var wachstumAsienZ:number= (asia2018-asia2008).toFixed(2);
-
-    // Australien
-    var prozentAustralienGes:number= ((australia2018/gesEmission)*100).toFixed(2);
-    var wachstumAustralienP:number= (((australia2018/australia2008)-1)*100).toFixed(2);
-    var wachstumAustralienZ:number= (australia2018-australia2008).toFixed(2);
-
-// Berechnungen E
 
 
 // Dom manipulation A
 
-    //Funktionen
-
-    // Europa
-    function europa(){
-        //Text
-        document.querySelector(".titleRegion").innerHTML = "Europa";
-        document.querySelector(".titleRegion2").innerHTML = "Europa";
-        document.querySelector("#absoluteEmi").innerHTML = europe2018 + " CO2 kg";
-        document.querySelector("#totalEmi").innerHTML = prozentEuropaGes + "%";
-        document.querySelector("#growthPerEmi").innerHTML = wachstumEuropaP + "%";
-        document.querySelector("#growthAbsEmi").innerHTML = wachstumEuropaZ + " CO2 kg";
-        //Diagramm
-        document.querySelector('.chart').setAttribute('style', 'height:' + prozentEuropaGes + "%" );
-    }
-    window.addEventListener('load', function(){
-        document.querySelector(".europe").addEventListener("click", europa);
-        });
-
-    // Nord Amerika
-    function nordAmerika(){
-        //Text
-        document.querySelector(".titleRegion").innerHTML = "Nord Amerika";
-        document.querySelector(".titleRegion2").innerHTML = "Nord Amerika";
-        document.querySelector("#absoluteEmi").innerHTML = nAmerica2018 + " CO2 kg";
-        document.querySelector("#totalEmi").innerHTML = prozentNAmerikaGes + "%";
-        document.querySelector("#growthPerEmi").innerHTML = wachstumNAmerikaP + "%";
-        document.querySelector("#growthAbsEmi").innerHTML = wachstumNAmerikaZ + " CO2 kg";
-        //Diagramm
-        document.querySelector('.chart').setAttribute('style', 'height:' + prozentNAmerikaGes + "%" );
-    }
-    window.addEventListener('load', function(){
-            document.querySelector(".northamerica").addEventListener("click", nordAmerika);
-        });
-        
-    //Süd Amerika
-    function suedAmerika(){
-        //Text
-        document.querySelector(".titleRegion").innerHTML = "Süd Amerika";
-        document.querySelector(".titleRegion2").innerHTML = "Süd Amerika";
-        document.querySelector("#absoluteEmi").innerHTML = sAmerica2018 + " CO2 kg";
-        document.querySelector("#totalEmi").innerHTML = prozentSAmerikaGes + "%";
-        document.querySelector("#growthPerEmi").innerHTML = wachstumSAmerikaP + "%";
-        document.querySelector("#growthAbsEmi").innerHTML = wachstumSAmerikaZ + " CO2 kg";
-        //Diagramm
-        document.querySelector('.chart').setAttribute('style', 'height:' + prozentSAmerikaGes + "%" );
-    }
-    window.addEventListener('load', function(){
-        document.querySelector(".southamerica").addEventListener("click", suedAmerika);
-        });
+    // Event listener
     
-    //Afrika
-    function afrika(){
-        //Text
-        document.querySelector(".titleRegion").innerHTML = "Afrika";
-        document.querySelector(".titleRegion2").innerHTML = "Afrika";
-        document.querySelector("#absoluteEmi").innerHTML = africa2018 + " CO2 kg";
-        document.querySelector("#totalEmi").innerHTML = prozentAfrikaGes + "%";
-        document.querySelector("#growthPerEmi").innerHTML = wachstumAfrikaP + "%";
-        document.querySelector("#growthAbsEmi").innerHTML = wachstumAfrikaZ + " CO2 kg";
-        //Diagramm
-        document.querySelector('.chart').setAttribute('style', 'height:' + prozentAfrikaGes + "%" );
-    }
     window.addEventListener('load', function(){
-        document.querySelector(".africa").addEventListener("click", afrika);
-        
+        document.querySelector(".europe").addEventListener("click", function(){
+        domManipulator("Europa", europe2018, europe2008);
+        })
         });
 
-    // Asien
-    function asien(){
-        //Text
-        document.querySelector(".titleRegion").innerHTML = "Asien";
-        document.querySelector(".titleRegion2").innerHTML = "Asien";
-        document.querySelector("#absoluteEmi").innerHTML = asia2018 + " CO2 kg";
-        document.querySelector("#totalEmi").innerHTML = prozentAsienGes + "%";
-        document.querySelector("#growthPerEmi").innerHTML = wachstumAsienP + "%";
-        document.querySelector("#growthAbsEmi").innerHTML = wachstumAsienZ + " CO2 kg";
-        //Diagramm
-        document.querySelector('.chart').setAttribute('style', 'height:' + prozentAsienGes + "%" );
-    }
     window.addEventListener('load', function(){
-        document.querySelector(".asia").addEventListener("click", asien);
+        document.querySelector(".northamerica").addEventListener("click", function(){
+        domManipulator("Nord Amerika", nAmerica2018, nAmerica2008);
+        })
         });
 
-    // Australien
-    function australien(){
-        //Text
-        document.querySelector(".titleRegion").innerHTML = "Australien";
-        document.querySelector(".titleRegion2").innerHTML = "Australien";
-        document.querySelector("#absoluteEmi").innerHTML = australia2018 + " CO2 kg";
-        document.querySelector("#totalEmi").innerHTML = prozentAustralienGes + "%";
-        document.querySelector("#growthPerEmi").innerHTML = wachstumAustralienP + "%";
-        document.querySelector("#growthAbsEmi").innerHTML = wachstumAustralienZ + " CO2 kg";
-        //Diagramm
-        document.querySelector('.chart').setAttribute('style', 'height:' + prozentAustralienGes + "%" );
-    }
     window.addEventListener('load', function(){
-        document.querySelector(".australia").addEventListener("click", australien);
+        document.querySelector(".southamerica").addEventListener("click", function(){
+        domManipulator("Süd Amerika", sAmerica2018, sAmerica2008);
+        })
         });
 
+    window.addEventListener('load', function(){
+        document.querySelector(".africa").addEventListener("click", function(){
+        domManipulator("Afrika", africa2018, africa2008);
+        })
+        });
+
+    window.addEventListener('load', function(){
+        document.querySelector(".asia").addEventListener("click", function(){
+        domManipulator("Asien", asia2018, asia2008);
+        })
+        });
+
+    window.addEventListener('load', function(){
+        document.querySelector(".australia").addEventListener("click", function(){
+        domManipulator("Australia", australia2018, australia2008);
+        })
+        });
+
+
+
+    //Funktion A
+
+    function domManipulator(kontinent: string, kontinent2018: number, kontinent2008: number){
+        //Text
+        document.querySelector(".titleRegion").innerHTML = kontinent;
+        document.querySelector(".titleRegion2").innerHTML = kontinent;
+        document.querySelector("#absoluteEmi").innerHTML = kontinent2018.toFixed(2) + " CO2 kg";
+        document.querySelector("#totalEmi").innerHTML = (100 / (gesEmission / kontinent2018)).toFixed(2) + "%";
+        document.querySelector("#growthPerEmi").innerHTML = (((kontinent2018 / kontinent2008) - 1) * 100).toFixed(2) + "%";
+        document.querySelector("#growthAbsEmi").innerHTML = (kontinent2018 - kontinent2008).toFixed(2) + " CO2 kg";
+        //Diagramm
+        document.querySelector('.chart').setAttribute('style', 'height:' + (100 / (gesEmission / kontinent2018)).toFixed(2) + "%" );
+    }
 
 // Dom manipulation E
 
