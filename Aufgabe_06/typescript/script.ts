@@ -94,14 +94,7 @@
 
 
 
-// // Konsolen Ausgabe A
-
-//     // Afrika
-//     console.log('Emissionswerte von Afrika');
-//     console.log('Die Emission von Afrika im Jahre 2018 ist: ' + africa2018 + 'kg CO2');
-//     console.log('Relativ zur Gesamtemission der Welt verursacht Afrika damit ' + prozentAfrikaGes + '%');
-//     console.log('Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission um: ' + wachstumAfrikaP + '% verändert');
-//     console.log('2018 im Vergleich zu 2008 sind das ' + wachstumAfrikaZ + 'kg CO2');
+// // Konsolen Ausgabe Ac2008 sind das ' + wachstumAfrikaZ + 'kg CO2');
 //     console.log('----------------------------------------------------------------------------------------');
 
 //     // Süd Amerika

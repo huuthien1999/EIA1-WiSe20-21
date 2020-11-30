@@ -1,0 +1,47 @@
+html{
+    height: 100%;
+}
+
+body{
+    background-color: #2A363B;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 500px;
+    height: 650px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container div{
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.sound1, .sound2, .sound3, .sound4{
+    background-color: #E84A5F;
+}
+
+.sound5{
+    background-color: #99B898;
+}
+
+.sound6, .sound9{
+    background-color: #FECEA8;
+}
+
+.sound7, .sound8{
+    background-color: #FF847C;
+}
+
+.playButton2{
+    cursor: pointer;
+}

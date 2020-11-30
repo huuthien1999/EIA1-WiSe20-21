@@ -27,42 +27,42 @@
 // Emissionswerter der Länder E
 
 
-// Berechnungen A
+// // Berechnungen A
 
-    // Gesamtemission
-    var gesEmission:number= africa2018 + sAmerica2018 + europe2018 + nAmerica2018 + asia2018 + australia2018;
+//     // Gesamtemission
+//     var gesEmission:number= africa2018 + sAmerica2018 + europe2018 + nAmerica2018 + asia2018 + australia2018;
 
-    // Afrika
-    var prozentAfrikaGes:number= ((africa2018/gesEmission)*100).toFixed(2);
-    var wachstumAfrikaP:number= (((africa2018/africa2008)-1)*100).toFixed(2);
-    var wachstumAfrikaZ:number= (africa2018-africa2008).toFixed(2);
+//     // Afrika
+//     var prozentAfrikaGes:number= ((africa2018/gesEmission)*100).toFixed(2);
+//     var wachstumAfrikaP:number= (((africa2018/africa2008)-1)*100).toFixed(2);
+//     var wachstumAfrikaZ:number= (africa2018-africa2008).toFixed(2);
 
-    // Süd Amerika
-    var prozentSAmerikaGes:number= ((sAmerica2018/gesEmission)*100).toFixed(2);
-    var wachstumSAmerikaP:number= (((sAmerica2018/sAmerica2008)-1)*100).toFixed(2);
-    var wachstumSAmerikaZ:number= (sAmerica2018-sAmerica2008).toFixed(2);
+//     // Süd Amerika
+//     var prozentSAmerikaGes:number= ((sAmerica2018/gesEmission)*100).toFixed(2);
+//     var wachstumSAmerikaP:number= (((sAmerica2018/sAmerica2008)-1)*100).toFixed(2);
+//     var wachstumSAmerikaZ:number= (sAmerica2018-sAmerica2008).toFixed(2);
 
-    // Europa
-    var prozentEuropaGes:number= ((europe2018/gesEmission)*100).toFixed(2);
-    var wachstumEuropaP:number= (((europe2018/europe2008)-1)*100).toFixed(2);
-    var wachstumEuropaZ:number= (europe2018-europe2008).toFixed(2);
+//     // Europa
+//     var prozentEuropaGes:number= ((europe2018/gesEmission)*100).toFixed(2);
+//     var wachstumEuropaP:number= (((europe2018/europe2008)-1)*100).toFixed(2);
+//     var wachstumEuropaZ:number= (europe2018-europe2008).toFixed(2);
 
-    // Nord Amerika
-    var prozentNAmerikaGes:number= ((nAmerica2018/gesEmission)*100).toFixed(2);
-    var wachstumNAmerikaP:number= (((nAmerica2018/nAmerica2008)-1)*100).toFixed(2);
-    var wachstumNAmerikaZ:number= (nAmerica2018-nAmerica2008).toFixed(2);
+//     // Nord Amerika
+//     var prozentNAmerikaGes:number= ((nAmerica2018/gesEmission)*100).toFixed(2);
+//     var wachstumNAmerikaP:number= (((nAmerica2018/nAmerica2008)-1)*100).toFixed(2);
+//     var wachstumNAmerikaZ:number= (nAmerica2018-nAmerica2008).toFixed(2);
 
-    // Asien
-    var prozentAsienGes:number= ((asia2018/gesEmission)*100).toFixed(2);
-    var wachstumAsienP:number= (((asia2018/asia2008)-1)*100).toFixed(2);
-    var wachstumAsienZ:number= (asia2018-asia2008).toFixed(2);
+//     // Asien
+//     var prozentAsienGes:number= ((asia2018/gesEmission)*100).toFixed(2);
+//     var wachstumAsienP:number= (((asia2018/asia2008)-1)*100).toFixed(2);
+//     var wachstumAsienZ:number= (asia2018-asia2008).toFixed(2);
 
-    // Australien
-    var prozentAustralienGes:number= ((australia2018/gesEmission)*100).toFixed(2);
-    var wachstumAustralienP:number= (((australia2018/australia2008)-1)*100).toFixed(2);
-    var wachstumAustralienZ:number= (australia2018-australia2008).toFixed(2);
+//     // Australien
+//     var prozentAustralienGes:number= ((australia2018/gesEmission)*100).toFixed(2);
+//     var wachstumAustralienP:number= (((australia2018/australia2008)-1)*100).toFixed(2);
+//     var wachstumAustralienZ:number= (australia2018-australia2008).toFixed(2);
 
-// Berechnungen E
+// // Berechnungen E
 
 
 // Konsolen Ausgabe A
