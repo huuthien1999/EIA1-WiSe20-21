@@ -44,15 +44,15 @@ function playSample(i) {
 ;
 // Play Button Eventlistener
 document.querySelector(".playButton2").addEventListener("click", function () {
-    setInterval(function () {
-        playButton();
-    }, 500);
+    playButton();
 });
 // Funktion  für PlayButton
 function playButton() {
-    drumPad[8].play();
-    drumPad[4].play();
-    drumPad[5].play();
+    setInterval(function () {
+        drumPad[8].play();
+        drumPad[4].play();
+        drumPad[5].play();
+    }, 500);
 }
 ;
 //# sourceMappingURL=script.js.map

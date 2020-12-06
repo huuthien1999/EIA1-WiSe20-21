@@ -11,6 +11,7 @@
     drumPad[7] = new Audio('./assets/laugh-2.mp3');
     drumPad[8] = new Audio('./assets/snare.mp3');
     
+    
 
 // Eventlistener für DrumPads A
 
@@ -61,17 +62,24 @@
 // Play Button Eventlistener
 
 document.querySelector(".playButton2").addEventListener("click", function(){
-    setInterval(function() {
         playButton();
-    }, 500);
     });
 
 // Funktion  für PlayButton
 
 function playButton(){
-    
-    drumPad[8].play();
-    drumPad[4].play();
-    drumPad[5].play();
+    setInterval(function() {
+        drumPad[8].play();
+        drumPad[4].play();
+        drumPad[5].play();
+    }, 500);
+
 
 };
+
+
+array[] = [1, 2, 3, 23, ]
+
+
+
+i = 0, i ++, i(array[].length)
