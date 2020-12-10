@@ -11,44 +11,44 @@ drumPad[7] = new Audio("./assets/laugh-2.mp3");
 drumPad[8] = new Audio("./assets/snare.mp3");
 // Eventlistener für DrumPads A
 document.querySelector(".sound1").addEventListener("click", function () {
-    playSample(drumPad[0]);
-    recordingBeat(drumPad[0]);
+    playSample(0);
+    recordingBeat(0);
 });
 document.querySelector(".sound2").addEventListener("click", function () {
-    playSample(drumPad[1]);
-    recordingBeat(drumPad[1]);
+    playSample(1);
+    recordingBeat(1);
 });
 document.querySelector(".sound3").addEventListener("click", function () {
-    playSample(drumPad[2]);
-    recordingBeat(drumPad[2]);
+    playSample(2);
+    recordingBeat(2);
 });
 document.querySelector(".sound4").addEventListener("click", function () {
-    playSample(drumPad[3]);
-    recordingBeat(drumPad[3]);
+    playSample(3);
+    recordingBeat(3);
 });
 document.querySelector(".sound5").addEventListener("click", function () {
-    playSample(drumPad[4]);
-    recordingBeat(drumPad[4]);
+    playSample(4);
+    recordingBeat(4);
 });
 document.querySelector(".sound6").addEventListener("click", function () {
-    playSample(drumPad[5]);
-    recordingBeat(drumPad[5]);
+    playSample(5);
+    recordingBeat(5);
 });
 document.querySelector(".sound7").addEventListener("click", function () {
-    playSample(drumPad[6]);
-    recordingBeat(drumPad[6]);
+    playSample(6);
+    recordingBeat(6);
 });
 document.querySelector(".sound8").addEventListener("click", function () {
-    playSample(drumPad[7]);
-    recordingBeat(drumPad[7]);
+    playSample(7);
+    recordingBeat(7);
 });
 document.querySelector(".sound9").addEventListener("click", function () {
-    playSample(drumPad[8]);
-    recordingBeat(drumPad[8]);
+    playSample(8);
+    recordingBeat(8);
 });
 // Funktion für DrumPads
 function playSample(i) {
-    i.play();
+    drumPad[i].play();
 }
 // Funktion für Record und Löschen Button
 //Variabeln für Record und Löschen Button
@@ -66,29 +66,22 @@ recordButton.addEventListener("click", function () {
         recordButton.classList.add("active");
         abfrage = true;
     }
-    recordingBeat;
 });
 trashButton.addEventListener("click", function () {
-    deletingBeat();
+    beat.splice(0, beat.length);
 });
-//Funktionen für für Record und Löschen Button
+//Funktionen für für Record
 function recordingBeat(i) {
-    console.log(abfrage);
     if (abfrage == true) {
         beat.push(i);
-        console.log(beat.length);
     }
-}
-function deletingBeat() {
-    beat.splice(0, beat.length);
-    console.log(beat.length);
 }
 // Funktion für Play und Pause Button
 //Variablen für Play und Pause Button
 var playButton = document.querySelector(".fa-play");
 var pauseButton = document.querySelector(".fa-stop");
 var myInterval;
-var i;
+var x = 0;
 //Eventlistener für Play und Pause Button
 playButton.addEventListener("click", function () {
     playSchleife(true);
@@ -104,12 +97,12 @@ pauseButton.addEventListener("click", function () {
 function playSchleife(b) {
     if (b == true) {
         myInterval = setInterval(function () {
-            if (i < beat.length) {
-                playSample(beat[i]);
-                i++;
+            if (x < beat.length) {
+                playSample(beat[x]);
+                x++;
             }
             else {
-                i = 0;
+                x = 0;
             }
         }, 500);
     }

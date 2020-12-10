@@ -13,55 +13,55 @@
 
 // Eventlistener für DrumPads A
     document.querySelector(".sound1").addEventListener("click",  () => {
-        playSample(drumPad[0]);
-        recordingBeat(drumPad[0]);
+        playSample(0);
+        recordingBeat(0);
         });
 
     document.querySelector(".sound2").addEventListener("click",  () => {
-        playSample(drumPad[1]);
-        recordingBeat(drumPad[1]);
+        playSample(1);
+        recordingBeat(1);
         });
 
     document.querySelector(".sound3").addEventListener("click",  () => {
-        playSample(drumPad[2]);
-        recordingBeat(drumPad[2]);
+        playSample(2);
+        recordingBeat(2);
         });
         
     document.querySelector(".sound4").addEventListener("click",  () => {
-        playSample(drumPad[3]);
-        recordingBeat(drumPad[3]);
+        playSample(3);
+        recordingBeat(3);
         });
 
     document.querySelector(".sound5").addEventListener("click",  () => {
-        playSample(drumPad[4]);
-        recordingBeat(drumPad[4]);
+        playSample(4);
+        recordingBeat(4);
         });
 
     document.querySelector(".sound6").addEventListener("click",  () => {
-        playSample(drumPad[5]);
-        recordingBeat(drumPad[5]);
+        playSample(5);
+        recordingBeat(5);
         });
 
     document.querySelector(".sound7").addEventListener("click",  () => {
-        playSample(drumPad[6]);
-        recordingBeat(drumPad[6]);
+        playSample(6);
+        recordingBeat(6);
         });
 
     document.querySelector(".sound8").addEventListener("click",  () => {
-        playSample(drumPad[7]);
-        recordingBeat(drumPad[7]);
+        playSample(7);
+        recordingBeat(7);
         });
 
     document.querySelector(".sound9").addEventListener("click",  () => {
-        playSample(drumPad[8]);
-        recordingBeat(drumPad[8]);
+        playSample(8);
+        recordingBeat(8);
         });
     
 
 // Funktion für DrumPads
 
-    function playSample (i: any) {
-        i.play();
+    function playSample (i: number): void {
+        drumPad[i].play();
     }
 
 
@@ -71,7 +71,7 @@
     let trashButton: HTMLElement = document.querySelector(".fa-trash-alt");
     let recordButton: HTMLElement = document.querySelector(".fa-microphone");
 
-    let beat: HTMLAudioElement [] = [];
+    let beat: number [] = [];
     let abfrage: boolean;
 
     //Eventlistener für Record und Löschen Button
@@ -84,44 +84,33 @@
             recordButton.classList.add("active");
             abfrage = true;
         }
-        recordingBeat;
     });
 
     trashButton.addEventListener("click", () => {
-        deletingBeat();
+        beat.splice(0, beat.length);
     });
 
-    //Funktionen für für Record und Löschen Button
-    function recordingBeat (i: HTMLAudioElement)  {
-        console.log(abfrage);
+    //Funktionen für für Record
+    function recordingBeat (i: number): void   {
         if (abfrage == true) {
             beat.push(i);
-            console.log(beat.length);
         }
     }
-
-    function deletingBeat () {
-        beat.splice(0, beat.length);
-        console.log(beat.length);
-    }
    
-
 // Funktion für Play und Pause Button
 
     //Variablen für Play und Pause Button
     let playButton: HTMLElement = document.querySelector(".fa-play");
     let pauseButton: HTMLElement = document.querySelector(".fa-stop");
 
-    let myInterval;    
-    let i;
+    let myInterval: number;    
+    let x: number = 0;
 
     //Eventlistener für Play und Pause Button
     playButton.addEventListener("click", () => {
         playSchleife(true);
         playButton.classList.add("inactive");
-        pauseButton.classList.remove("inactive");
-        
-
+        pauseButton.classList.remove("inactive"); 
     });
 
     pauseButton.addEventListener("click", () => {
@@ -131,23 +120,19 @@
     });
 
     //Funktion für Play und Pause Button
-    function playSchleife (b: boolean) {
+    function playSchleife (b: boolean): void {
 
-        if (b == true) {
-            
-            myInterval = setInterval(() => {        
-                
-                if (i < beat.length) {
-                    playSample(beat[i]);
-                    i++;
+        if (b == true) {      
+            myInterval = setInterval(function (): void  {               
+                if (x < beat.length) {
+                    playSample(beat[x]);
+                    x++;
                 }
-                
                 else {
-                    i = 0;
+                    x = 0;
                 }
-            },500 );
+            },                       500 );
         }
-        
         else {
             clearInterval(myInterval);
         }
