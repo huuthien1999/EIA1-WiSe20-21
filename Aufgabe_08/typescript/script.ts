@@ -1,5 +1,5 @@
 //  String mit Sounds
-    let drumPad = [];
+    let drumPad: HTMLAudioElement [] = [];
     drumPad[0] = new Audio("./assets/A.mp3");
     drumPad[1] = new Audio("./assets/C.mp3");
     drumPad[2] = new Audio("./assets/F.mp3");
