@@ -40,7 +40,7 @@ namespace Aufgabe10und11 {
         undoneDOMElement = document.querySelector("#undone");
 
         addButtonDOMElement.addEventListener("click", () => {
-            addTodo;
+            addTodo();
         });
         drawListToDOM();
     });
@@ -88,7 +88,7 @@ namespace Aufgabe10und11 {
     }
 
 
-    function addTodo(text: string): void {
+    function addTodo(): void {
         if (inputDOMElement.value != "") {
             todoListe.unshift({
                 todosText: inputDOMElement.value,
@@ -97,14 +97,14 @@ namespace Aufgabe10und11 {
             inputDOMElement.value = "";
             drawListToDOM();
         }
-        if (artyomKey == true) {
-            todoListe.unshift({
-                todosText: text,
-                todosChecked: false
-            });
-            artyomKey = false;
-            drawListToDOM();
-        }
+        // if (artyomKey == true) {
+        //     todoListe.unshift({
+        //         todosText: text,
+        //         todosChecked: false
+        //     });
+        //     artyomKey = false;
+        //     drawListToDOM();
+        // }
     }
 
     function toggleCheckState(index: number): void {
@@ -128,8 +128,13 @@ namespace Aufgabe10und11 {
             smart: true,
             action: function (i: any, wildcard: string): void {
                 console.log("Neue Aufgabe wird erstellt: " + wildcard);
-                artyomKey = true;
-                addTodo(wildcard);
+                todoListe.unshift({
+                    todosText: wildcard,
+                    todosChecked: false
+                });
+                drawListToDOM();
+                // artyomKey = true;
+                // addTodo(wildcard);
             }
         });
 

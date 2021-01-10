@@ -29,7 +29,7 @@ var Aufgabe10und11;
         doneDOMElement = document.querySelector("#done");
         undoneDOMElement = document.querySelector("#undone");
         addButtonDOMElement.addEventListener("click", function () {
-            addTodo;
+            addTodo();
         });
         drawListToDOM();
     });
@@ -71,7 +71,7 @@ var Aufgabe10und11;
         doneDOMElement.innerHTML = done + " done";
         undoneDOMElement.innerHTML = undone + " open";
     }
-    function addTodo(text) {
+    function addTodo() {
         if (inputDOMElement.value != "") {
             todoListe.unshift({
                 todosText: inputDOMElement.value,
@@ -80,14 +80,14 @@ var Aufgabe10und11;
             inputDOMElement.value = "";
             drawListToDOM();
         }
-        if (artyomKey == true) {
-            todoListe.unshift({
-                todosText: text,
-                todosChecked: false
-            });
-            artyomKey = false;
-            drawListToDOM();
-        }
+        // if (artyomKey == true) {
+        //     todoListe.unshift({
+        //         todosText: text,
+        //         todosChecked: false
+        //     });
+        //     artyomKey = false;
+        //     drawListToDOM();
+        // }
     }
     function toggleCheckState(index) {
         todoListe[index].todosChecked = !todoListe[index].todosChecked;
@@ -104,8 +104,13 @@ var Aufgabe10und11;
             smart: true,
             action: function (i, wildcard) {
                 console.log("Neue Aufgabe wird erstellt: " + wildcard);
-                artyomKey = true;
-                addTodo(wildcard);
+                todoListe.unshift({
+                    todosText: wildcard,
+                    todosChecked: false
+                });
+                drawListToDOM();
+                // artyomKey = true;
+                // addTodo(wildcard);
             }
         });
         function startArtyom() {
